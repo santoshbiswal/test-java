@@ -1,0 +1,8 @@
+---
+- hosts: all
+  
+  tasks:
+   - name: copy jar file
+     copy: src=target/gs-serving-web-content-0.1.0.jar dest=/root/gs-serving-web-content-0.1.0.jar
+   - name: start java application
+     command: java -jar /root/gs-serving-web-content-0.1.0.jar
