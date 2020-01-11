@@ -6,9 +6,9 @@ node {
 
         checkout scm
     }
-    stage('Run ansible playbook to configure nginx') {
+    stage('Java build') {
         sh "mvn clean install"
     }
-    stage('Run ansible playbook to configure nginx') {
+    stage('Deployment in server') {
         sh "ansible-playbook java.yml"
 }
