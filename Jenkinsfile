@@ -9,4 +9,6 @@ node {
     stage('Run ansible playbook to configure nginx') {
         sh "mvn clean install"
     }
+    stage('Run ansible playbook to configure nginx') {
+        sh "ansible-playbook java.yml"
 }
