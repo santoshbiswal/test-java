@@ -11,4 +11,5 @@ node {
     }
     stage('Deployment in server') {
         sh "ansible-playbook java.yml"
+    }
 }
